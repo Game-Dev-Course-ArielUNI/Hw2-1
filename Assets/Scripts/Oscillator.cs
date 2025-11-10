@@ -1,7 +1,6 @@
 using UnityEngine;
 
 public class Oscillator : MonoBehaviour
-
 {
     [Tooltip("Direction of oscillation, e.g., Vector3.right for horizontal.")]
     public Vector3 oscillationDirection = Vector3.right;
@@ -31,10 +30,8 @@ public class Oscillator : MonoBehaviour
     {
         phase += Time.deltaTime * speed;
 
-      
         float offset = Mathf.Sin(phase) * Maxdistance;
 
-      
         transform.position = StartPosition + oscillationDirection.normalized * offset;
     }
 }
